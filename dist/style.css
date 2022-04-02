@@ -4,9 +4,64 @@
 }
 
 body {
+  margin: 0;
   font-family: "Dune_Rise", Arial, Helvetica, sans-serif;
   color: white;
   background-image: url("images/dune_bg.jpg");
   background-attachment: fixed;
   background-size: cover;
+}
+
+.headline,
+.nav,
+.footer {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.headline {
+  margin: 0;
+  padding: 40px;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.nav {
+  height: 80px;
+  font-size: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.nav-button {
+  cursor: pointer;
+  justify-self: center;
+  align-self: center;
+}
+
+.nav-button:hover {
+  font-size: 1.7rem;
+}
+
+.nav-button::after {
+  content: "";
+  position: relative;
+  display: block;
+  height: 2px;
+  width: 0;
+  background-color: white;
+  transition: all ease-in-out 200ms;
+}
+
+.nav-button:hover::after {
+  width: 100%;
+}
+
+.footer {
+  height: 2rem;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
