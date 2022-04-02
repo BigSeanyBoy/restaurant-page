@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "Dune_Rise";
+  src: url("font/Dune_Rise.otf");
+}
+
+body {
+  font-family: "Dune_Rise", Arial, Helvetica, sans-serif;
+  color: white;
+  background-image: url("images/dune_bg.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+}
