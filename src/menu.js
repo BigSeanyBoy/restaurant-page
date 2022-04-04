@@ -7,10 +7,32 @@ function menu() {
   menu.textContent = 'Menu';
   background.appendChild(menu);
 
-  const items = document.createElement('div');
-  items.classList.add('items');
-  items.textContent = 'Menu - Mish Mish (apricots) - Grilled Muad-dib - Tabara - Spice Coffee';
-  background.appendChild(items);
+  const cardContainer = document.createElement('div');
+  cardContainer.classList.add('card-container');
+
+  const menuItems = [['Grilled Muad-dib', '../dist/images/meat.png'], 
+                     ['Mish Mish', '../dist/images/apricot.png'],
+                     ['Melange Coffee', '../dist/images/coffee-cup.png'],
+                     ['Tabara', '../dist/images/cinnamon-roll.png']];
+
+  for (const item of menuItems) {
+    const card = document.createElement('div');
+    card.classList.add('card');
+
+    const image = document.createElement('img');
+    image.classList.add('menu-image');
+    image.setAttribute('src', item[1]);
+    card.appendChild(image);
+
+    const name = document.createElement('div');
+    name.classList.add('menu-item');
+    name.textContent = item[0];
+    card.appendChild(name);
+
+    cardContainer.appendChild(card);
+  }
+
+  background.appendChild(cardContainer);
 
   return background;
 
