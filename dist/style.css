@@ -4,6 +4,8 @@
 }
 
 body {
+  height: 100vh;
+  width: 100vw;
   margin: 0;
   font-family: "Dune_Rise", Arial, Helvetica, sans-serif;
   color: white;
@@ -12,8 +14,16 @@ body {
   background-size: cover;
 }
 
+#content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .headline,
 .nav,
+.tab-background,
 .footer {
   background-color: rgba(0, 0, 0, 0.5);
 }
@@ -56,11 +66,16 @@ body {
   width: 100%;
 }
 
+.tab-background {
+  flex-grow: 1;
+  width: 60%;
+  margin: 20px 0;
+  align-self: center;
+}
+
 .footer {
   height: 2rem;
   width: 100%;
-  position: absolute;
-  bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;

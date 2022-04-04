@@ -22,6 +22,13 @@ function nav() {
   return nav;
 }
 
+function tabBackground() {
+  const background = document.createElement('div');
+  background.classList.add('tab-background');
+
+  return background;
+}
+
 function footer() {
   const footer = document.createElement('footer');
   footer.classList.add('footer');
@@ -35,6 +42,7 @@ function initialize() {
 
   content.appendChild(headline());
   content.appendChild(nav());
+  content.appendChild(tabBackground());
   content.appendChild(footer());
 }
 
