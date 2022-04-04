@@ -75,12 +75,23 @@ body {
   align-self: center;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+}
+
+.map {
+  outline: 1px solid whitesmoke;
 }
 
 .map,
 .logo {
   width: 75%;
+}
+
+.message,
+.location {
+  font-size: 1.2rem;
+  text-decoration: underline;
 }
 
 .footer {
