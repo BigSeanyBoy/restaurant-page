@@ -1,3 +1,7 @@
+import contact from './contact';
+import home from './home';
+import menu from './menu';
+
 function headline() {
   const headline = document.createElement('h1');
   headline.classList.add('headline');
@@ -10,12 +14,19 @@ function nav() {
   const nav = document.createElement('nav');
   nav.classList.add('nav');
 
-  const pages = ['Home', 'Menu', 'Contact'];
-  for (let page of pages) {
+  const pages = {home: home(), menu: menu(), contact: contact()};
+  for (let page in pages) {
     const navButton = document.createElement('div');
     navButton.classList.add('nav-button');
-    navButton.setAttribute('id', `${page.toLowerCase()}`);
+    navButton.setAttribute('id', `${page}`);
     navButton.textContent = page;
+    navButton.addEventListener('click', () => {
+      const tab = document.querySelector('.tab-background');
+      while (tab.firstChild) {
+        tab.removeChild(tab.firstChild);
+      }
+      tab.appendChild(pages[page]);
+    });
     nav.appendChild(navButton);
   }
 
@@ -25,6 +36,7 @@ function nav() {
 function tabBackground() {
   const background = document.createElement('div');
   background.classList.add('tab-background');
+  background.appendChild(home());
 
   return background;
 }
