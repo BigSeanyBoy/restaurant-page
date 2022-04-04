@@ -7,7 +7,7 @@ function contact() {
   contact.textContent = 'Contact';
   background.appendChild(contact);
 
-  const message = document.createElement('h3');
+  const message = document.createElement('div');
   message.classList.add('message');
   message.textContent = 'Message';
   background.appendChild(message);
@@ -17,7 +17,7 @@ function contact() {
   courier.textContent = 'Guild Courier';
   background.appendChild(courier);
 
-  const location = document.createElement('h3');
+  const location = document.createElement('div');
   location.classList.add('location');
   location.textContent = 'Location';
   background.appendChild(location);
