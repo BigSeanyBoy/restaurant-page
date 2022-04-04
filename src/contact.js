@@ -33,6 +33,8 @@ function contact() {
   background.appendChild(map);
 
   return background;
+
+  // https://atlasoficeandfireblog.wordpress.com/2019/04/01/atlas-of-the-imperium-arrakis/
 }
 
 export default contact;

@@ -12,6 +12,11 @@ function home() {
   copy.textContent = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab velit explicabo doloremque illum porro nesciunt, unde similique ratione ut dicta dignissimos quia expedita, repudiandae rerum. Cumque commodi illo dolorum impedit!'
   background.appendChild(copy);
 
+  const logo = document.createElement('img');
+  logo.classList.add('logo');
+  logo.setAttribute('src', '../dist/images/sand.png');
+  background.appendChild(logo);
+
   return background;
 }
 
