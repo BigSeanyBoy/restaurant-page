@@ -10,6 +10,7 @@ body {
   font-family: "Dune_Rise", Arial, Helvetica, sans-serif;
   color: white;
   background-image: url("images/dune_bg.jpg");
+  /* https://www.pexels.com/photo/desert-during-nighttime-847402/ */
   background-attachment: fixed;
   background-size: cover;
 }
@@ -71,6 +72,10 @@ body {
   width: 60%;
   margin: 20px 0;
   align-self: center;
+}
+
+.map {
+  width: 75%;
 }
 
 .footer {
