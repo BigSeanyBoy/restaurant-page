@@ -21,24 +21,14 @@ function nav() {
     navButton.setAttribute('id', `${page}`);
     navButton.textContent = page;
     navButton.addEventListener('click', () => {
-      const tab = document.querySelector('.tab-background');
-      while (tab.firstChild) {
-        tab.removeChild(tab.firstChild);
-      }
-      tab.appendChild(pages[page]);
+      const content = document.getElementById('content');
+      content.removeChild(document.querySelector('.tab-background'));
+      content.insertBefore(pages[page], document.querySelector('.footer'));
     });
     nav.appendChild(navButton);
   }
 
   return nav;
-}
-
-function tabBackground() {
-  const background = document.createElement('div');
-  background.classList.add('tab-background');
-  background.appendChild(home());
-
-  return background;
 }
 
 function footer() {
@@ -54,7 +44,7 @@ function initialize() {
 
   content.appendChild(headline());
   content.appendChild(nav());
-  content.appendChild(tabBackground());
+  content.appendChild(home());
   content.appendChild(footer());
 }
 
