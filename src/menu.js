@@ -10,10 +10,10 @@ function menu() {
   const cardContainer = document.createElement('div');
   cardContainer.classList.add('card-container');
 
-  const menuItems = [['Grilled Muad-dib', '../dist/images/meat.png'], 
-                     ['Mish Mish', '../dist/images/apricot.png'],
-                     ['Melange Coffee', '../dist/images/coffee-cup.png'],
-                     ['Tabara', '../dist/images/cinnamon-roll.png']];
+  const menuItems = [['Grilled Muad-dib', 'images/meat.png'], 
+                     ['Mish Mish', 'images/apricot.png'],
+                     ['Melange Coffee', 'images/coffee-cup.png'],
+                     ['Tabara', 'images/cinnamon-roll.png']];
 
   for (const item of menuItems) {
     const card = document.createElement('div');

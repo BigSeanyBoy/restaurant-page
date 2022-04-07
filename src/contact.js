@@ -29,7 +29,7 @@ function contact() {
 
   const map = document.createElement('img');
   map.classList.add('map');
-  map.setAttribute('src', '../dist/images/dune_map.png');
+  map.setAttribute('src', 'images/dune_map.png');
   background.appendChild(map);
 
   return background;

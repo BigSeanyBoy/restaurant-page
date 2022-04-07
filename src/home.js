@@ -14,7 +14,7 @@ function home() {
 
   const logo = document.createElement('img');
   logo.classList.add('logo');
-  logo.setAttribute('src', '../dist/images/sand.png');
+  logo.setAttribute('src', 'images/sand.png');
   background.appendChild(logo);
 
   return background;
